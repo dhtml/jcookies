@@ -1,0 +1,31 @@
+<html>
+<title>My Cookie Test</title>
+<script src="cookies.class.js"></script>
+<script>
+var food=new jcookies();
+
+function savex() {
+food.set("meal",cook.value);
+alert("Swallowed "+cook.value);
+}
+
+function loadx() {
+cook.value=food.get("meal");
+}
+
+function erasex() {
+cook.value="";
+food.erase("meal");
+alert("Vomited meal");
+}
+
+</script>
+
+
+<input type="text" id="cook">
+<input type="button" value="Save" onclick="savex()">
+<input type="button" value="Load" onclick="loadx()">
+<input type="button" value="Vomit" onclick="erasex()">
+
+</body>
+</html>
